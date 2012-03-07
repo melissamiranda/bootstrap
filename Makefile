@@ -37,7 +37,17 @@ bootstrap:
 	lessc --compress ${BOOTSTRAP_RESPONSIVE_LESS} > bootstrap/css/bootstrap-responsive.min.css
 	cat js/bootstrap-transition.js js/bootstrap-alert.js js/bootstrap-button.js js/bootstrap-carousel.js js/bootstrap-collapse.js js/bootstrap-dropdown.js js/bootstrap-modal.js js/bootstrap-tooltip.js js/bootstrap-popover.js js/bootstrap-scrollspy.js js/bootstrap-tab.js js/bootstrap-typeahead.js > bootstrap/js/bootstrap.js
 	uglifyjs -nc bootstrap/js/bootstrap.js > bootstrap/js/bootstrap.min.js
+	cp bootstrap/css/*.css ~/.virtualenvs/tinyreview/tinyreview/static/css/
 
+recompile-css:
+	mkdir -p bootstrap/css
+	lessc ${BOOTSTRAP_LESS} > bootstrap/css/bootstrap.css
+	cp bootstrap/css/bootstrap.css bootstrap/css/boostrap.min.css
+	#lessc --compress ${BOOTSTRAP_LESS} > bootstrap/css/bootstrap.min.css
+	lessc ${BOOTSTRAP_RESPONSIVE_LESS} > bootstrap/css/bootstrap-responsive.css
+	cp bootstrap/css/bootstrap-responsive.css bootstrap/css/boostrap-responsive.min.css
+	#lessc --compress ${BOOTSTRAP_RESPONSIVE_LESS} > bootstrap/css/bootstrap-responsive.min.css
+	cp bootstrap/css/*.css ~/.virtualenvs/tinyreview/tinyreview/static/css/
 #
 # MAKE FOR GH-PAGES 4 FAT & MDO ONLY (O_O  )
 #
@@ -53,7 +63,8 @@ gh-pages: docs
 
 watch:
 	echo "Watching less files..."; \
-	watchr -e "watch('less/.*\.less') { system 'make' }"
+	#watchr -e "watch('less/.*\.less') { system 'make' }"
+	kicker -e "make recompile-css" less/*
 
 
 .PHONY: dist docs watch gh-pages

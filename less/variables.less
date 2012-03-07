@@ -8,7 +8,7 @@
 // --------------------------------------------------
 
 // Links
-@linkColor:             #08c;
+@linkColor:             #16A9D9;
 @linkColorHover:        darken(@linkColor, 15%);
 
 // Grays
@@ -20,21 +20,45 @@
 @grayLighter:           #eee;
 @white:                 #fff;
 
+// Tiny South By added colors
+@grayDarkSX:              #424242;
+@grayLightSX:             #E9E9E9;
+
 // Accent colors
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
+@blue:                  #1FA1CC;
+@blueDark:              #107F99;
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
-@orange:                #f89406;
+@orange:                #FF9900;
 @pink:                  #c3325f;
 @purple:                #7a43b6;
 
+// Text Shadows
+@whiteTextShadowColor:  rgba(255,255,255,.8);
+
+
+// INSTALL LEAGUE GOTHIC
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('/static/fonts/League_Gothic-webfont.eot');
+    src: url('/static/fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/League_Gothic-webfont.woff') format('woff'),
+         url('/static/fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('/static/fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@fancy-font: LeagueGothicRegular, Impact, 'Arial Narrow', Futura, sans-serif;
+
+
 // Typography
-@baseFontSize:          13px;
+@baseFontSize:          14px;
 @baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @baseLineHeight:        18px;
 @textColor:             @grayDark;
+
 
 // Buttons
 @primaryButtonBackground:    @linkColor;
@@ -65,14 +89,16 @@
 @hrBorder:                @grayLighter;
 
 // Navbar
-@navbarHeight:                    40px;
-@navbarBackground:                @grayDarker;
-@navbarBackgroundHighlight:       @grayDark;
+@navbarHeight:                    85px;
+@navbarBackground:                darken(lighten(@grayLightSX, 25%), 10%);
+@navbarBackgroundHighlight:       lighten(@grayLightSX, 25%);
 @navbarLinkBackgroundHover:       transparent;
 
 @navbarText:                      @grayLight;
 @navbarLinkColor:                 @grayLight;
-@navbarLinkColorHover:            @white;
+@navbarLinkColorHover:            @grayDarkSX;
+@navbarTextShadowColor:           @whiteTextShadowColor;
+
 
 // Form states and alerts
 @warningText:             #c09853;

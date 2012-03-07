@@ -1,0 +1,78 @@
+.mobile {
+  display: none;
+}
+
+@media (max-width: 480px) { 
+  .mobile {
+    display: block;
+  }
+
+  #sidebar {
+    display: none;
+  }
+}
+
+/* SIDEBAR STYLING */
+#sidebar {
+	h3 {
+		font-family: @fancy-font;
+		font-weight: normal;
+		text-transform: uppercase;
+		font-size: 28px;
+		line-height: 1.2em;
+		letter-spacing: 1px;
+	}
+}
+
+// NAVIGATION
+.navtinysouthby {
+	.fancy-font;
+	font-size: 25px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+/* REMIX PAGE */
+#remix {
+	position: relative;
+	img {
+		.img-border
+	}
+	fieldset {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+
+	/* 460px wide image for writing tiny review */
+	input[type=text] {
+	  display: block;
+	  .fancy-font;
+		font-size: 81px;
+		background-color: rgba(0,0,0,.2);
+		border: 2px solid rgba(0,0,0,.5);
+		color: white;
+		text-shadow: 1px 1px 4px rgba(0,0,0,.85);
+		width: 428px;
+		height: 81px;
+	}
+}
+
+
+/* MIXINS */
+
+.img-border {
+	padding: 4px;
+	line-height: 1;
+	border: 1px solid #DDD;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075); 
+}
+.fancy-font {
+	font-family: @fancy-font;
+}
