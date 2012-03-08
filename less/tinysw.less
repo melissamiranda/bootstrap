@@ -1,64 +1,45 @@
+// HIDE SIDEBAR FROM MOBILE PHONES - 
 .mobile {
   display: none;
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 767px) { 
   .mobile {
     display: block;
   }
-
   #sidebar {
     display: none;
   }
 }
 
-/* SIDEBAR STYLING */
-#sidebar {
-	h3 {
-		font-family: @fancy-font;
-		font-weight: normal;
-		text-transform: uppercase;
-		font-size: 28px;
-		line-height: 1.2em;
-		letter-spacing: 1px;
-	}
-}
-
-// NAVIGATION
-.navtinysouthby {
-	.fancy-font;
-	font-size: 25px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-
-/* REMIX PAGE */
-#remix {
-	position: relative;
-	img {
-		.img-border
-	}
-	fieldset {
-		position: absolute;
-		top: 15px;
-		left: 15px;
-	}
-
-	/* 460px wide image for writing tiny review */
-	input[type=text] {
-	  display: block;
-	  .fancy-font;
-		font-size: 81px;
-		background-color: rgba(0,0,0,.2);
-		border: 2px solid rgba(0,0,0,.5);
+#y-u-no-download-mobile {
+	padding: 10px 15px;
+	display: block;
+	background-color: @orange;
+	border: 1px solid darken(@orange, 10%);
+	.border-radius(3px);
+	margin-bottom: 10px;
+	text-decoration: none;
+	h4 {
 		color: white;
-		text-shadow: 1px 1px 4px rgba(0,0,0,.85);
-		width: 428px;
-		height: 81px;
+		font-family: @fancy-font;
+		font-size: 30px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		// text-shadow: 0 -1px 0 darken(@orange, 15%);	
+		text-align: center;
+		cursor: pointer;
+		line-height: 40px;
+	}
+	[class^="icon-"], [class*=" icon-"] {
+		vertical-align: middle;
 	}
 }
 
+// DICK REQUESTS
+img.fbshare {
+	cursor: pointer;
+}
 
 /* MIXINS */
 
@@ -76,3 +57,197 @@
 .fancy-font {
 	font-family: @fancy-font;
 }
+
+/* SIDEBAR STYLING */
+#sidebar {
+	h3 {
+		font-family: @fancy-font;
+		font-weight: normal;
+		text-transform: uppercase;
+		font-size: 28px;
+		line-height: 1.2em;
+		letter-spacing: 1px;
+		border-bottom: 1px solid darken(@bodyBackgroundColor, 5%);
+	}
+	.section {
+	  margin-bottom: 40px;
+	}
+	.section .header {
+		border-bottom: 1px solid white;		
+		margin-bottom: 10px;
+	}
+	#app-store-link {
+		margin-top: 20px;
+		display: block;
+	}
+}
+
+// NAVIGATION
+.navtinysouthby {
+	font-family: @fancy-font;
+	font-size: 25px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+// PAGE HEADER
+.page-header {
+	border-bottom: none !important;
+	h1.fancy-font {
+		font-weight: normal;
+		font-size: 45px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+}
+.page-header.has-button {
+	position: relative;
+	h1 {
+		padding-right: 104px;
+	}
+	.btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+
+// EXTRA BUTTON MARKUP
+.btn-large-fancy-font {
+	font-family: @fancy-font;
+	font-size: 21px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	[class^="icon-"], [class*=" icon-"] {
+		height: 20px;
+		background-position-y: -67px;
+	}
+}
+.btn-normal-fancy-font {
+	font-family: @fancy-font;
+	font-size: 21px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	[class^="icon-"], [class*=" icon-"] {
+		height: 20px;
+		background-position-y: -67px;
+	}
+}
+.btn-count {
+	font-family: @fancy-font;
+	margin-left: 3px;
+	color: @blue;
+	font-size: 21px;
+}
+.btn-huge-fancy-font {
+	padding: 12px 45px;
+	font-family: @fancy-font;
+	font-size: 28px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.btn-delete {
+	border: none;
+	background-color: @bodyBackgroundColor !important;
+	color: @red;
+	padding: 0;
+	cursor: pointer;
+	box-shadow: none;
+}
+
+
+// FEED (MAIN)
+.feed {
+	.span3 {
+		margin-left: 12px;
+	}
+	.btn-large {
+		margin-bottom: 12px;
+	}
+	h4 {
+		margin-top: 5px;
+	}
+	.img-container {
+		position: relative;
+		margin-bottom: 10px;
+	}
+	h4 {
+		padding-right: 184px;  // To prevent text from sliding under share buttons
+	}
+	.share-buttons {
+		position: absolute;
+		right: -41px;
+		bottom: -5px;
+		.twitter-tweet-button {
+			width: 90px;
+			overflow: hidden;
+			display: inline-block;
+			vertical-align: bottom;
+		}
+	}
+}
+
+// PIN PAGE
+.next-previous {
+	margin: 10px 0 10px -20px;
+}
+img.img-border {
+	margin-top: 10px;
+}
+#pin-page {
+	.twitter-tweet-button {
+		display: inline-block;
+		width: 85px;
+	}
+	.alert-success {
+		font-size: 21px;
+		img {
+			margin-top: 10px;
+		}
+	}
+}
+.img-container {
+	position: relative;   // setup container to abs position buttons flush left
+	.vote-remix-btns {
+		position: absolute;
+		top: -47px;
+		right: -10px;
+	}
+	.next-btn {
+		position: absolute;
+		bottom: -41px;
+		right: -77px;
+	}
+}
+
+
+// REMIX PAGE
+#remix {
+	position: relative;
+	img {
+		margin-bottom: 10px;
+		.img-border
+	}
+	fieldset {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+
+	/* 460px wide image for writing tiny review */
+	input[type=text] {
+	  display: block;
+	  .fancy-font;
+		font-size: 81px;
+		background-color: rgba(0,0,0,.35);
+		border: 2px solid rgba(0,0,0,.5);
+		color: white;
+		text-shadow: 1px 1px 4px rgba(0,0,0,.85);
+		width: 428px;
+		height: 81px;
+	}
+}
+
+
+

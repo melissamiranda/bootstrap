@@ -1,0 +1,89 @@
+// ADJUSTMENTS TO RESPONSIVE DESIGN
+
+// TINY SOUTH BY WAS DESIGNED FIRST FOR DESKTOP (940px), 
+// ALL ADJUSTMENTS TO OTHER WIDTHS MADE HERE
+
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+  .mobile {
+    display: block;
+  }
+}
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media (max-width: 767px) { 
+	.alert {
+		margin-bottom: 10px !important;
+	}
+	.feed {
+		.like-remix-btns {
+			.like-btn {
+				vertical-align: top;
+				display: inline-block;
+			}
+			.remix-btn {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+	#pin-page {
+		margin-top: 20px;
+	}
+}
+
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: 979px) {
+	.feed {
+		.share-buttons {
+			bottom: 13px;
+		}
+		h4 a {
+			display: block;
+		}		
+	}
+	#pin-page {
+		.share-buttons {
+			width: 200px;
+		}
+		h3 small {
+			font-size: 9px;
+		}
+	}
+	.next-btn {
+		position: absolute;
+		bottom: -41px;
+		right: -42px;
+	}
+}
+
+
+
+
+
+// DEFAULT DESKTOP
+// ---------------
+
+// @media (min-width: 980px) {
+
+// }
+
+// // LARGE DESKTOP & UP
+// // ------------------
+
+// @media (min-width: 1200px) {
+
+// }
