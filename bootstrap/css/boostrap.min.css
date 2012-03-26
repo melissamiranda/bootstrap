@@ -3718,7 +3718,7 @@ a.thumbnail:hover {
   }
 }
 #y-u-no-download-mobile {
-  padding: 10px 15px;
+  padding: 5px 8px;
   display: block;
   background-color: #ff9900;
   border: 1px solid #cc7a00;
@@ -3731,7 +3731,7 @@ a.thumbnail:hover {
 #y-u-no-download-mobile h4 {
   color: white;
   font-family: LeagueGothicRegular, Impact, 'Arial Narrow', Futura, sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: normal;
   letter-spacing: 1px;
   text-align: center;
@@ -3868,14 +3868,14 @@ img.fbshare {
 }
 .feed .share-buttons {
   position: absolute;
-  right: -41px;
+  right: 0;
   bottom: -5px;
 }
 .feed .share-buttons .twitter-tweet-button {
-  width: 90px;
+  width: 58px;
   overflow: hidden;
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 .next-previous {
   margin: 10px 0 10px -20px;
@@ -3885,6 +3885,7 @@ img.img-border {
 }
 #pin-page .twitter-tweet-button {
   display: inline-block;
+  vertical-align: top;
   width: 85px;
 }
 #pin-page .alert-success {
@@ -3939,6 +3940,18 @@ img.img-border {
   width: 428px;
   height: 81px;
 }
+.feed .img-container {
+  min-height: 309px;
+}
+#pin-page .img-border {
+  min-height: 309px;
+}
+#remix .remix-img {
+  min-height: 309px;
+}
+#photo-gallery.thumbnails img {
+  min-height: 210px;
+}
 @media (max-width: 480px) {
   .mobile {
     display: block;
@@ -3959,13 +3972,20 @@ img.img-border {
   #pin-page {
     margin-top: 20px;
   }
+  #remix {
+    max-width: 458px;
+  }
+  #remix input[type=text] {
+    width: 96%;
+    font-size: ;
+  }
 }
 @media (min-width: 768px) and (max-width: 979px) {
   
 }
 @media (max-width: 979px) {
   .feed .share-buttons {
-    bottom: 13px;
+    bottom: 9px;
   }
   .feed h4 a {
     display: block;
@@ -3980,5 +4000,53 @@ img.img-border {
     position: absolute;
     bottom: -41px;
     right: -42px;
+  }
+  #remix .remix-img {
+    width: 460px;
+  }
+}
+@media (max-width: 480px) {
+  #remix {
+    max-width: 312px;
+  }
+  #remix .remix-img {
+    width: 309px;
+  }
+  #remix input[type=text] {
+    font-size: 54px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
+    width: 94%;
+    height: 54px;
+  }
+  #pin-page .vote-remix-btns {
+    top: -33px;
+  }
+  #pin-page .vote-remix-btns .btn-large {
+    padding: 4px 10px;
+  }
+  #pin-page .vote-remix-btns .btn-large-fancy-font,
+  #pin-page .vote-remix-btns .btn-count {
+    font-size: 18px;
+  }
+  #pin-page .vote-remix-btns [class^="sx-icon-"],
+  #pin-page .vote-remix-btns [class*=" sx-icon-"] {
+    height: 20px;
+  }
+  #pin-page .vote-remix-btns .sx-icon-thumbsup {
+    background-position-y: 3px;
+  }
+  #pin-page .btn-large-fancy-font [class^="icon-"],
+  #pin-page .btn-large-fancy-font [class*=" icon-"] {
+    background-position-y: -69px;
+  }
+  #pin-page .btn-normal-fancy-font {
+    font-size: 18px;
+  }
+  #pin-page .fb-like {
+    display: block;
+  }
+  #pin-page .twitter-tweet-button {
+    display: inline-block;
   }
 }

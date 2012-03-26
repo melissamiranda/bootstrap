@@ -13,7 +13,7 @@
 }
 
 #y-u-no-download-mobile {
-	padding: 10px 15px;
+	padding: 5px 8px;
 	display: block;
 	background-color: @orange;
 	border: 1px solid darken(@orange, 10%);
@@ -23,7 +23,7 @@
 	h4 {
 		color: white;
 		font-family: @fancy-font;
-		font-size: 30px;
+		font-size: 24px;
 		font-weight: normal;
 		letter-spacing: 1px;
 		// text-shadow: 0 -1px 0 darken(@orange, 15%);	
@@ -177,13 +177,13 @@ img.fbshare {
 	}
 	.share-buttons {
 		position: absolute;
-		right: -41px;
+		right: 0;
 		bottom: -5px;
 		.twitter-tweet-button {
-			width: 90px;
+			width: 58px;
 			overflow: hidden;
 			display: inline-block;
-			vertical-align: bottom;
+			vertical-align: top;
 		}
 	}
 }
@@ -198,6 +198,7 @@ img.img-border {
 #pin-page {
 	.twitter-tweet-button {
 		display: inline-block;
+		vertical-align: top;
 		width: 85px;
 	}
 	.alert-success {
@@ -249,5 +250,26 @@ img.img-border {
 	}
 }
 
+// Add min height to all images, to hold space while loading
+.feed {
+	.img-container {
+		min-height: 309px;
+	}
+}
+#pin-page {
+	.img-border {
+		min-height: 309px; 
+	}
+}
+#remix {
+	.remix-img {
+		min-height: 309px;
+	}
+}
+#photo-gallery.thumbnails {
+	img {
+	min-height: 210px;		
+	}
+}
 
 

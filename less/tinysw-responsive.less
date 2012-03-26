@@ -35,6 +35,13 @@
 	#pin-page {
 		margin-top: 20px;
 	}
+	#remix {
+		max-width: 458px;
+		input[type=text] {
+			width: 96%;
+			font-size: ;
+		}
+	}
 }
 
 // PORTRAIT TABLET TO DEFAULT DESKTOP
@@ -49,7 +56,7 @@
 @media (max-width: 979px) {
 	.feed {
 		.share-buttons {
-			bottom: 13px;
+			bottom: 9px;			
 		}
 		h4 a {
 			display: block;
@@ -68,8 +75,63 @@
 		bottom: -41px;
 		right: -42px;
 	}
+	#remix {
+		.remix-img {
+			width: 460px;
+		}
+	}
 }
 
+// UP TO LANDSCAPE PHONE - Ensure remix form keeps the image size static - (wysiwyg)
+// ---------------------
+
+@media (max-width: 480px) {
+	#remix {
+		max-width: 312px;
+		.remix-img {
+			width: 309px;
+		}
+		input[type=text] {
+			font-size: 54px;
+			border: 1px solid rgba(0,0,0,.5);
+			text-shadow: 1px 1px 3px rgba(0,0,0,.85);
+			width: 94%;
+			height: 54px;
+		}
+	}
+	#pin-page {
+		.vote-remix-btns {   
+			top: -33px;   // Reposition like remix buttons over the image, since fb like button on separate line
+			// Makes btn-large smaller, could be applied more universally
+			.btn-large {                    
+				padding: 4px 10px;
+			}
+			.btn-large-fancy-font, .btn-count {
+				font-size: 18px;
+			}
+			[class^="sx-icon-"], [class*=" sx-icon-"] {
+				height: 20px;
+			}
+			.sx-icon-thumbsup {
+				background-position-y: 3px;
+			}
+		}
+		.btn-large-fancy-font [class^="icon-"], .btn-large-fancy-font [class*=" icon-"] {
+			background-position-y: -69px;				
+		}
+		.btn-normal-fancy-font {
+			font-size: 18px;
+		}
+		// Move fb like button to its own line
+		.fb-like {         
+			display: block;
+		}
+		.twitter-tweet-button {
+			display: inline-block;
+		}
+	}
+
+}
 
 
 
