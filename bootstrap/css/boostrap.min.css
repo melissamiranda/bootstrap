@@ -2342,7 +2342,7 @@ input[type="submit"].btn.small {
 }
 .nav > li > a:hover {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #d6d6d6;
 }
 .nav .nav-header {
   display: block;
@@ -2699,7 +2699,7 @@ input[type="submit"].btn.small {
 .navbar .brand {
   float: left;
   display: block;
-  padding: 8px 20px 12px;
+  padding: 19px 20px 12px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
